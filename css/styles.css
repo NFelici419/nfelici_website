@@ -1,0 +1,296 @@
+/* USE FOR CUSTOM STYLE AND LAYOUT: */
+/* Add or adjust banners for organization */
+/* modern-normalize is taking care of the box-sizing,
+   which is still a standard way to design */
+:root{
+    --accent-yellow: #FFCC68;
+    --main-white: #FFFFFF;
+    --main-black: #000000;
+    --light-grey: #F2F1EB;
+    --base-font: 'Montserrat', sans-serif;
+    --second-font: 'DM Serif Display', serif;
+    --text-size-xs: 0.69rem;
+    --text-size-sm: 0.83rem;
+    --text-size-md: 1rem;
+    --text-size-lg: 1.2rem;
+    --text-size-xl: 1.44rem;
+    --text-size-2xl: 1.73rem;
+    --text-size-3xl: 2.07rem;
+    --text-size-4xl: 2.49rem;
+    --text-size-5xl: 2.99rem;           
+}
+/* * * * * * * * * * * * * * * * * * * * * * * * *
+    UTILITIES 
+* * * * * * * * * * * * * * * * * * * * * * * * */
+/* Screen Reader Only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+body {
+    /* use the project's background image (use cover so it fills the viewport)
+       file is at ../images/background.png */
+    background-image: url('../images/background.png');
+    background-size: 5rem;
+    background-repeat: repeat;
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * *
+    TYPOGRAPHY 
+    For larger projects, consider using a type scale:
+    https://baseline.is/tools/type-scale-generator/
+* * * * * * * * * * * * * * * * * * * * * * * * */
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * *
+    STRUCTURE
+* * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* Navigation */
+.logo{
+    width: 20%;
+    height: auto;
+    margin: 10px 0;
+}
+.branding{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.menu a{
+    text-decoration: none;
+    color: var(--main-black);
+    font-weight: bold;
+    font-size: var(--text-size-md);
+    font-family: var(--base-font);
+    transition: background 0.2s, color 0.2s
+
+}
+.menu a:hover{
+    color: var(--accent-yellow);
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 2px solid var(--main-black);
+    background-color: var(--light-grey);
+}
+
+
+/* Intro Body */
+/* mobile first body */
+.intro-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center; 
+    padding: 1.25rem 0;
+    margin: 0 1rem 0 1rem;    
+    /* border: .2rem solid black; */
+    animation: fade-in 1s backwards;
+
+
+}
+
+/* Base headshot styling*/
+.headshot{
+    display: block; /* lets margin auto work */
+    width: 20rem;
+    height: auto;
+    border-radius: 2%;
+    margin: 0 auto; /* centers if it's a block */
+}
+
+.name{
+    font-size: var(--text-size-4xl);
+    font-weight: bold;
+    margin: 0.5rem 0;
+    font-family: var(--second-font);
+    border-bottom: .1rem solid black;
+}
+
+.intro-text{
+    font-size: var(--text-size-xl);
+    max-width: 600px;
+    margin: 0 1rem;
+    font-family: var(--second-font);
+    font-weight: 400s;
+}
+
+/* Body Text */
+.body-text{
+    font-size: var(--text-size-lg);
+    text-align: center;
+    font-family: var(--base-font);
+    font-weight: normal;
+    margin: 2rem 1rem 0 1rem;  
+    animation: fade-in 1s backwards;
+    margin: 0 4rem 0 4rem
+
+    /* border: .2rem solid black; */
+
+}
+
+
+
+/* footer */
+footer{
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 2px solid var(--main-black);
+    margin-top: 2rem;
+    font-family: var(--second-font);
+    font-size: var(--text-size-sm);
+    animation: fade-in 1s backwards;
+
+}
+
+/* Media queries */
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .intro-body{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        padding: 2rem 1rem;
+        text-align: left; 
+    }
+
+    .headshot{
+        width: 220px;
+        margin: 0;
+    }
+
+    .name{
+        font-size: var(--text-size-4xl);
+        margin-left: 1rem;
+    }
+    .intro-text{
+        font-size: 1.5rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .intro-body{
+        justify-content: center;
+        gap: 3rem;
+        padding: 3rem 1rem;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .headshot{
+        width: 280px;
+    }
+
+    .intro-text{
+        font-size: 2rem;
+    }
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * *
+    COMPONENTS
+* * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* 
+    IMAGES
+*/
+
+/* 
+    LINKS
+*/
+
+/* 
+    BUTTONS
+*/
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    animation: fade-in 1s backwards;
+
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5em 1.25em;
+    background-color: var(--accent-yellow);
+    color: var(--main-black);
+    border-radius: 0.5em;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s
+}
+
+.btn:hover, .btn:focus {
+    background-color: var(--main-black);
+    color: var(--accent-yellow);
+}
+/* 
+    TABLES
+*/
+
+/* * * * * * * * * * * * * * * * * * * * * * * * *
+    PAGE SPECIFIC
+* * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * *
+    MEDIA QUERIES 
+* * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* X-Small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (width >=576px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (width >=768px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (width >=992px) {}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (width >=1200px) {}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (width >=1400px) {}

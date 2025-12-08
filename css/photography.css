@@ -1,0 +1,211 @@
+/* USE FOR CUSTOM STYLE AND LAYOUT: */
+/* Add or adjust banners for organization */
+/* modern-normalize is taking care of the box-sizing,
+   which is still a standard way to design */
+:root{
+    --accent-yellow: #FFCC68;
+    --main-white: #FFFFFF;
+    --main-black: #000000;
+    --light-grey: #F2F1EB;
+    --base-font: 'Montserrat', sans-serif;
+    --second-font: 'DM Serif Display', serif;
+    --text-size-xs: 0.69rem;
+    --text-size-sm: 0.83rem;
+    --text-size-md: 1rem;
+    --text-size-lg: 1.2rem;
+    --text-size-xl: 1.44rem;
+    --text-size-2xl: 1.73rem;
+    --text-size-3xl: 2.07rem;
+    --text-size-4xl: 2.49rem;
+    --text-size-5xl: 2.99rem;           
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * *
+    UTILITIES 
+* * * * * * * * * * * * * * * * * * * * * * * * */
+/* Screen Reader Only */
+.sr-only {
+    position: absolute;
+figure:hover img {
+    transform: scale(1.05);
+}
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+img {
+    display: block;
+    max-inline-size: 100%;
+}
+
+
+body {
+    /* use the project's background image (use cover so it fills the viewport)
+       file is at ../images/background.png */
+    background-image: url('../images/background.png');
+    background-size: 5rem;
+    background-repeat: repeat;
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * *
+    TYPOGRAPHY 
+    For larger projects, consider using a type scale:
+    https://baseline.is/tools/type-scale-generator/
+* * * * * * * * * * * * * * * * * * * * * * * * */
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * *
+    STRUCTURE
+* * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* Navigation */
+.logo{
+    width: 20%;
+    height: auto;
+    margin: 10px 0;
+}
+.branding{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.menu a{
+    text-decoration: none;
+    color: var(--main-black);
+    font-weight: bold;
+    font-size: var(--text-size-md);
+    font-family: var(--base-font);
+    transition: background 0.2s, color 0.2s
+
+}
+.menu a:hover{
+    color: var(--accent-yellow);
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 2px solid var(--main-black);
+    background-color: var(--light-grey);
+}
+
+.header-container{
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+}
+
+.header-text{
+    font-family: var(--second-font);
+    font-size: var(--text-size-4xl);
+    margin-bottom: 10px;
+    animation: fade-in 1s backwards;
+
+}
+
+.body-text{
+    margin: 0 10%;
+    font-family: var(--base-font);
+    font-size: var(--text-size-md);
+    line-height: 1.5;
+    font-weight: 400;
+    animation: fade-in 1s backwards;
+
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * *
+ * Hover.css (http://ianlunn.github.io/Hover/)
+ * Version: 2.3.2
+ * Author: Ian Lunn @IanLunn
+ * Author URL: http://ianlunn.co.uk/
+ * Github: https://github.com/IanLunn/Hover
+
+ * Hover.css Copyright Ian Lunn 2017. Generated with Sass.
+ * 
+ /* Grow */
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/* Gallery Section */
+section {
+    margin-inline: auto;
+    max-inline-size: 1200px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    animation: fade-in 1s backwards;
+
+}
+
+figure {
+    padding: 1rem 1rem 1rem;
+    width: 250px;
+    flex: 1 1 auto;
+    max-width: 400px;
+    min-width: 250px;
+}
+
+figcaption{
+    margin-top: 0.5rem;
+    font-family: var(--base-font);
+    font-size: var(--text-size-md);
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: var(--main-black);
+    transition: background 0.2s, color 0.2s
+
+}
+
+a:hover{
+    color: var(--accent-yellow);
+}
+
+/* footer */
+footer{
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 2px solid var(--main-black);
+    margin-top: 2rem;
+    font-family: var(--second-font);
+    font-size: var(--text-size-sm);
+    animation: fade-in 1s backwards;
+
+}
+
