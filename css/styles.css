@@ -183,10 +183,9 @@ nav li{
     font-size: var(--text-size-lg);
     text-align: center;
     font-family: var(--base-font);
-    font-weight: normal;
     animation: fade-in 1s backwards;
-    margin: 0 5rem 0 5rem;
-}
+    margin: 0 2.5rem 0 2.5rem;
+    }
 
 
 
@@ -202,10 +201,12 @@ footer{
 
 }
 
+
+
+
 /* Media queries */
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-
+@media (width >=768px) {
     .logo{
         width: 20%;
     }
@@ -233,32 +234,8 @@ footer{
 
     .body-text{
         font-size: var(--text-size-lg);
-        margin: 0 10rem 0 10rem; 
-    }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-    .logo{
-        width: 20%;
-    }
-    .intro-body{
-        justify-content: center;
-        gap: 3rem;
-        padding: 3rem 1rem;
-        max-width: 1100px;
-        margin: 0 auto;
-    }
-
-    .headshot{
-        width: 280px;
-    }
-
-    .intro-text{
-        font-size: 2rem;
-    }
-    .body-text{
-        margin: 0 15rem 0 15rem; 
+        margin: 0 20rem 0 20rem;
+        text-align: left;
     }
 }
 
