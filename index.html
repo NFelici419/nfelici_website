@@ -1,104 +1,279 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <!-- add your own favicon - https://favicon.io/ -->
-    <link rel="shortcut icon" href="images/bookmark.png" type="image/x-icon">
-    <!-- reset default browser stylesheet -->
-    <link rel="stylesheet" href="css/modern-normalize.css">
-    <!-- add google font and other resources here -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-    </style>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-    </style>
-    <!-- custom styles -->
-    <link rel="stylesheet" href="css/styles.css">
-        <!-- google icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+    <title>Nelson Feliciano &mdash; Informatics Security &amp; Photography</title>
+    <meta name="description"
+        content="Nelson Feliciano is an Informatics Security major at IU Bloomington and a portrait, wedding and event photographer based in Indiana.">
 
+    <link rel="shortcut icon" href="images/bookmark.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@300;400;500&display=swap">
+
+    <link rel="stylesheet" href="css/modern-normalize.css">
+    <link rel="stylesheet" href="css/site.css">
+
+    <!-- Flag JS early so reveal animations only hide content that can be revealed. -->
+    <script>
+        document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    </script>
+    <script src="js/site.js" defer></script>
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav id="top">
-        <div class="branding">
-            <a href="index.html"><img class="logo" src="images/Logo.png" alt="Logo" />
-            </a>
-        </div>
-        
-        <li class="menu-button"><span class="material-symbols-outlined">menu</span></li>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    </nav>
-        <div class="menu">
-            <ul>        
-                <li><a class="menu-item" href="index.html">Home</a>
-                </li>
-                <li><a class="menu-item" href="about.html">About</a>
-                </li>
-                <li><a class="menu-item" href="project.html">Projects</a>
-                </li>  
-                <li><a class="menu-item" href="photography.html">Photography</a>
-                </li>
-                <li><a class="menu-item" href="https://drive.google.com/file/d/1KW00hVrqf_apSDK2lC9JU-Bb8WTQt8RU/view?usp=sharing" target="_blank">Resume</a>
-                </li>    
-            
+    <!-- ==================================================================
+         NAVIGATION
+         ================================================================== -->
+    <nav class="nav" id="top" aria-label="Primary">
+        <div class="nav__inner">
+            <ul class="nav__links nav__links--left">
+                <li><a class="nav__link" href="index.html">Home</a></li>
+                <li><a class="nav__link" href="about.html">About</a></li>
+                <li><a class="nav__link" href="project.html">Projects</a></li>
             </ul>
 
-        </div>
-    
-    <!-- Introduction -->
-    <div class="intro-body">
-        <img src="images/headshot.jpg" alt="headshot image" class="headshot">
-        
-        <div class="intro-text-container">
-            <h1 class="name">Nelson Feliciano</h1> 
-            <p class="intro-text">Informatics Security Major/Photographer</p>               
-        </div>
-   </div>
+            <a class="nav__wordmark" href="index.html">Nelson Feliciano</a>
 
-    <!-- Body text --> 
-    <div class="body-text">
-        <p>
-            Hello and welcome to my page. My name is Nelson Feliciano, and I am an Informatics Security major at IU Bloomington.
-        </p>
-        <p>
-            On this website, you will find my About me and Projects alongside a collection of my photography work, showcasing my skills and artistic vision.
-            I hope to inspire others through my images and share my passion for photography with the world.
-            You will also be able to find my resume highlighting my academic achievements and professional experience in the workforce.
-        </p>
-        <p>
-            Thank you for visiting my website! 
-            Feel free to explore my photography portfolio and learn more about my journey and also view my resume!.
-        </p>
-    </div>  
-    <!-- Buttons -->
-    <div class="buttons">
-        <a href="#top" class="btn">Back to Top</a>
+            <ul class="nav__links nav__links--right">
+                <li><a class="nav__link" href="photography.html">Photography</a></li>
+                <li>
+                    <a class="nav__link"
+                        href="https://drive.google.com/file/d/1KW00hVrqf_apSDK2lC9JU-Bb8WTQt8RU/view?usp=sharing"
+                        target="_blank" rel="noopener">Resume</a>
+                </li>
+                <li><a class="nav__link" href="index.html#contact">Contact</a></li>
+            </ul>
+
+            <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="menu" id="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="photography.html">Photography</a></li>
+            <li>
+                <a href="https://drive.google.com/file/d/1KW00hVrqf_apSDK2lC9JU-Bb8WTQt8RU/view?usp=sharing"
+                    target="_blank" rel="noopener">Resume</a>
+            </li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <p class="menu__meta">NF Photography Services</p>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>2025 Nelson Feliciano / NF Photography Services</p>
+    <main id="main">
+        <!-- ==============================================================
+             HERO
+             ============================================================== -->
+        <header class="hero">
+            <div class="hero__body">
+                <span class="eyebrow" data-reveal>Bloomington, Indiana</span>
+                <h1 class="hero__title" data-reveal data-delay="1">
+                    <span>Nelson</span>
+                    <span>Feliciano</span>
+                </h1>
+                <hr class="hero__rule" data-reveal data-delay="1">
+                <p class="script hero__sub" data-reveal data-delay="2">
+                    Informatics security major &amp; photographer
+                </p>
+                <div class="btn-row" style="margin-top: 2.5rem;" data-reveal data-delay="3">
+                    <a class="btn" href="photography.html">View Portfolio</a>
+                    <a class="btn btn--ghost" href="about.html">About Me</a>
+                </div>
+            </div>
+
+            <div class="hero__media">
+                <img src="images/headshot.jpg" width="910" height="1366"
+                    alt="Nelson Feliciano photographed against a shingled wall in afternoon light">
+            </div>
+        </header>
+
+        <!-- ==============================================================
+             TRACKED STRIP
+             ============================================================== -->
+        <section class="strip" aria-label="At a glance">
+            <div class="wrap">
+                <ul class="strip__list">
+                    <li>Informatics Security</li>
+                    <li>Portraits &amp; Weddings</li>
+                    <li>Five Years Behind the Lens</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ==============================================================
+             WELCOME
+             ============================================================== -->
+        <section class="section">
+            <div class="wrap">
+                <div class="feature feature--reverse">
+                    <div class="feature__media" data-reveal>
+                        <img src="images/gallery3.jpg" width="2048" height="1366" loading="lazy"
+                            alt="A wedding portrait from one of my recent galleries">
+                    </div>
+
+                    <div class="feature__body" data-reveal data-delay="1">
+                        <span class="eyebrow">Welcome</span>
+                        <h2 class="script" style="margin-bottom: 1.75rem;">
+                            Hello, and welcome to my page
+                        </h2>
+                        <p>
+                            My name is Nelson Feliciano, and I am an Informatics Security major at
+                            IU Bloomington.
+                        </p>
+                        <p>
+                            Here you will find a little about me and my projects, alongside a
+                            collection of my photography work. I hope to inspire others through my
+                            images and share my passion for photography with the world.
+                        </p>
+                        <p>
+                            You will also find my resume, highlighting my academic achievements and
+                            my professional experience in the workforce.
+                        </p>
+                        <div class="btn-row" style="margin-top: 2.25rem;">
+                            <a class="btn" href="about.html">More About Me</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================================================
+             FULL-BLEED BREAK
+             ============================================================== -->
+        <div class="bleed" data-reveal>
+            <img src="images/recent-shot.jpg" width="2048" height="1365" loading="lazy"
+                alt="Looking down a wide New York City avenue in late afternoon light">
+        </div>
+
+        <section class="section--tight section">
+            <div class="wrap wrap--narrow">
+                <p class="script quote" data-reveal>
+                    Capturing moments, and telling the story around them.
+                </p>
+            </div>
+        </section>
+
+        <hr class="rule">
+
+        <!-- ==============================================================
+             WORK PREVIEW
+             ============================================================== -->
+        <section class="section">
+            <div class="wrap">
+                <div class="stack-center" style="margin-bottom: clamp(2.5rem, 5vw, 4rem);" data-reveal>
+                    <span class="eyebrow">Browse My Work</span>
+                    <h2 class="h2">Recent Galleries</h2>
+                </div>
+
+                <ul class="grid grid--three">
+                    <li class="card" data-reveal>
+                        <a href="https://nfphotographyservices.pic-time.com/-ricardoemilysspecialday/gallery"
+                            target="_blank" rel="noopener">
+                            <div class="card__frame">
+                                <img src="images/gallery2.jpg" width="2048" height="1366" loading="lazy"
+                                    alt="Ricardo and Emily on their wedding day">
+                            </div>
+                            <h3 class="card__title">Weddings</h3>
+                            <span class="link link--arrow">View Gallery</span>
+                        </a>
+                    </li>
+
+                    <li class="card" data-reveal data-delay="1">
+                        <a href="https://nfphotographyservices.pic-time.com/-elizabethsphotoshoot/gallery"
+                            target="_blank" rel="noopener">
+                            <div class="card__frame">
+                                <img src="images/gallery6.jpg" width="2048" height="1366" loading="lazy"
+                                    alt="A graduation portrait session on campus">
+                            </div>
+                            <h3 class="card__title">Portraits</h3>
+                            <span class="link link--arrow">View Gallery</span>
+                        </a>
+                    </li>
+
+                    <li class="card" data-reveal data-delay="2">
+                        <a href="https://nfphotographyservices.pic-time.com/-bailefolkloricoiubloomington/gallery"
+                            target="_blank" rel="noopener">
+                            <div class="card__frame">
+                                <img src="images/gallery7.jpg" width="2048" height="1366" loading="lazy"
+                                    alt="Dancers performing at a Baile Folklorico showcase">
+                            </div>
+                            <h3 class="card__title">Events</h3>
+                            <span class="link link--arrow">View Gallery</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="stack-center" style="margin-top: clamp(2.5rem, 5vw, 4rem);" data-reveal>
+                    <div class="btn-row">
+                        <a class="btn" href="photography.html">See the Full Portfolio</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================================================
+             CLOSING
+             ============================================================== -->
+        <section class="section section--capped" id="contact">
+            <div class="wrap wrap--narrow stack-center">
+                <span class="eyebrow" data-reveal>Let&rsquo;s Connect</span>
+                <h2 class="h2" data-reveal data-delay="1">Work With Me</h2>
+                <p class="measure" style="margin-top: 1.5rem;" data-reveal data-delay="1">
+                    Planning a wedding, a quincea&ntilde;era, a graduation session or an event?
+                    I would love to hear about it. Send me the details and we can talk through
+                    what you have in mind.
+                </p>
+
+                <a class="contact__email" href="mailto:nf.photographyservices@gmail.com"
+                    data-reveal data-delay="2">nf.photographyservices@gmail.com</a>
+
+                <div class="btn-row" style="margin-top: 2.5rem;" data-reveal data-delay="3">
+                    <a class="btn"
+                        href="mailto:nf.photographyservices@gmail.com?subject=Photography%20Inquiry">Email Me</a>
+                    <a class="btn btn--ghost" href="photography.html">View Portfolio</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================================================================
+         FOOTER
+         ================================================================== -->
+    <footer class="footer">
+        <div class="wrap">
+            <img class="footer__logo" src="images/Logo%202.png" width="500" height="500" loading="lazy"
+                alt="Nelson Feliciano monogram">
+
+            <ul class="footer__links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="photography.html">Photography</a></li>
+                <li>
+                    <a href="https://drive.google.com/file/d/1KW00hVrqf_apSDK2lC9JU-Bb8WTQt8RU/view?usp=sharing"
+                        target="_blank" rel="noopener">Resume</a>
+                </li>
+            </ul>
+
+            <p class="footer__contact"><a href="mailto:nf.photographyservices@gmail.com">nf.photographyservices@gmail.com</a></p>
+
+            <p class="footer__note">&copy; 2026 Nelson Feliciano &middot; NF Photography Services</p>
+        </div>
     </footer>
 
-
-
-    <!-- JavaScript -->
-    <script>
-        // once the dropdown is toggled, add the class 'show' to each menu item to reveal it
-        // if clicked again, toggle this effect by removing the 'show' class
-        function toggleDropdown() {
-            document.querySelectorAll('.menu-item, .menu').forEach(item => item.classList.toggle('show'));
-        }
-        // On the element with the class menu-button, wait for it to be clicked, then toggle the dropdown
-        document.querySelector('.menu-button').addEventListener('click', toggleDropdown);
-    </script>
+    <a class="to-top" href="#top" aria-label="Back to top">&uarr;</a>
 </body>
-
 
 </html>
