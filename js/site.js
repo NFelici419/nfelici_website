@@ -42,8 +42,9 @@
         });
 
         // The overlay is mobile-only; drop it if the viewport grows past the
-        // breakpoint while it happens to be open.
-        window.matchMedia('(min-width: 900px)').addEventListener('change', function (event) {
+        // breakpoint while it happens to be open. Must match the 1024px
+        // breakpoint that reveals the desktop nav in site.css.
+        window.matchMedia('(min-width: 1024px)').addEventListener('change', function (event) {
             if (event.matches) setMenu(false);
         });
     }
