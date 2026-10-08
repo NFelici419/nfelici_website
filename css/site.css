@@ -972,3 +972,163 @@ figure { margin: 0; }
     text-transform: uppercase;
     color: var(--ink-mute);
 }
+
+/* ==========================================================================
+   PRICING
+   Numbered packages in the alternating feature layout, then an add-on list.
+   ========================================================================== */
+.packages {
+    display: grid;
+    gap: clamp(4.5rem, 10vw, 8rem);
+}
+
+.package .feature__media img { aspect-ratio: 4 / 5; }
+
+.package__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.1rem;
+}
+
+.package__head .eyebrow { margin: 0; }
+
+.badge {
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: var(--track-wide);
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: var(--ink);
+    border: 1px solid var(--ink);
+    padding: 0.25rem 0.65rem;
+}
+
+.package__title {
+    font-family: var(--serif);
+    font-size: clamp(1.6rem, 3vw, 2.25rem);
+    letter-spacing: 0.06em;
+    line-height: 1.15;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+}
+
+.includes {
+    list-style: none;
+    margin: 1.5rem 0 2rem;
+    padding: 0;
+    font-size: var(--text-sm);
+    letter-spacing: var(--track-tight);
+}
+
+.includes li {
+    padding-block: 0.6rem;
+    border-top: 1px solid var(--rule);
+}
+
+.includes li:last-child { border-bottom: 1px solid var(--rule); }
+
+.price { margin-bottom: 2rem; }
+
+.price .eyebrow { margin-bottom: 0.4rem; }
+
+.price__amount {
+    display: block;
+    font-family: var(--serif);
+    font-size: 2.5rem;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+}
+
+.addons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--rule);
+}
+
+.addons li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.5rem 1.5rem;
+    padding-block: 1.35rem;
+    border-bottom: 1px solid var(--rule);
+}
+
+.addons__name {
+    font-size: var(--text-sm);
+    font-weight: 400;
+    letter-spacing: var(--track-mid);
+    text-transform: uppercase;
+    color: var(--ink);
+}
+
+.addons__price {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    color: var(--ink);
+}
+
+.faq { border-top: 1px solid var(--rule); }
+
+.faq details { border-bottom: 1px solid var(--rule); }
+
+.faq summary {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: 1.35rem;
+    font-size: var(--text-sm);
+    font-weight: 400;
+    letter-spacing: var(--track-mid);
+    text-transform: uppercase;
+    color: var(--ink);
+    cursor: pointer;
+    list-style: none;
+}
+
+.faq summary::-webkit-details-marker { display: none; }
+
+.faq summary::after {
+    content: "+";
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.faq details[open] summary::after { content: "\2212"; }
+
+.faq details p { padding-bottom: 1.35rem; max-width: 60ch; }
+
+/* Shared inclusions, listed once above the packages */
+.perks {
+    max-width: var(--wrap-mid);
+    margin: 0 auto clamp(4rem, 8vw, 6.5rem);
+    padding: clamp(2rem, 4vw, 2.75rem) 0;
+    border-block: 1px solid var(--rule);
+    text-align: center;
+}
+
+.perks ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.6rem 2.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: var(--text-sm);
+    color: var(--ink);
+}
+
+@media (min-width: 720px) {
+    .perks ul { grid-template-columns: repeat(2, 1fr); text-align: left; }
+}
+
+.deal {
+    max-width: 34ch;
+    margin: clamp(4rem, 8vw, 6rem) auto 0;
+}
